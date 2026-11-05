@@ -1,0 +1,21 @@
+.test-loading { min-height: 100dvh; display: grid; place-content: center; gap: 10px; background: #17382d; color: #f4e6c7; text-align: center; }
+.test-loading a { color: #ebca8c; }
+.test-lab-toggle { position: fixed; z-index: 20; top: 58px; left: 12px; padding: 8px 12px; border: 1px solid #e4c98f; border-radius: 9px; background: #163629f2; color: #fff0ce; font-weight: 800; box-shadow: 0 6px 17px #061a13a8; }
+.test-lab-toggle.has-error { border-color: #f29987; }
+.test-lab-panel { position: fixed; z-index: 20; top: 103px; left: 12px; width: min(305px, calc(100vw - 24px)); max-height: calc(100dvh - 115px); overflow: auto; padding: 13px; border: 1px solid #d8bd85; border-radius: 12px; background: #163629f5; color: #f3e5c6; box-shadow: 0 15px 38px #03140ec9; scrollbar-width: thin; }
+.test-lab-panel header { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.test-lab-panel header strong { font: 21px Georgia, serif; }
+.test-lab-panel header small, .test-lab-panel p, .test-lab-award small { color: #d5c8a8; font-size: 11px; }
+.test-lab-panel section { margin-top: 13px; padding-top: 10px; border-top: 1px solid #b89a664d; }
+.test-lab-panel h2 { margin: 0 0 7px; font-size: 12px; color: #f2d69c; }
+.test-lab-panel label { display: grid; grid-template-columns: 100px 1fr; align-items: center; gap: 6px; margin: 5px 0; font-size: 10px; }
+.test-lab-panel select, .test-lab-panel input { width: 100%; min-width: 0; padding: 6px; border: 1px solid #8a9d75; border-radius: 5px; background: #0b281e; color: #fff1d1; }
+.test-lab-panel button:not(.test-lab-toggle) { width: 100%; margin-top: 5px; padding: 7px; border: 1px solid #d7ba81; border-radius: 6px; background: #d4b778; color: #153326; font-size: 10px; font-weight: 800; cursor: pointer; }
+.test-lab-panel button:disabled { opacity: .5; cursor: default; }
+.test-lab-buttons { display: flex; gap: 6px; }
+.test-lab-award { display: grid; gap: 3px; margin-top: 9px; }
+.test-lab-award strong { font-size: 11px; }
+.test-lab-panel footer { display: grid; width: 100%; min-height: 0; gap: 8px; margin: 15px 0 0; padding-top: 10px; border-top: 1px solid #b89a664d; text-align: center; }
+.test-lab-panel footer a { color: #f5d594; font-size: 11px; }
+.test-lab-error { padding: 8px; border: 1px solid #e3947e; border-radius: 6px; background: #773e34; color: #fff0df !important; }
+@media (max-width: 600px) { .test-lab-toggle { top: 44px; left: 6px; } .test-lab-panel { top: 87px; left: 6px; max-height: calc(100dvh - 94px); } }

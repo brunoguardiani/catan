@@ -1,0 +1,66 @@
+﻿.player-hand-wrap { position: relative; display: flex; flex: none; flex-direction: column; align-items: center; width: 100px; min-height: 30px; color: #f7e9c8; text-align: center; }
+.player-hand-name { display: flex; align-items: center; justify-content: center; gap: 5px; width: 100%; min-height: 20px; padding: 2px 5px; border: 1px solid #d2b5775c; border-radius: 8px; background: #102b22c9; box-shadow: 0 3px 8px #07160fad; font: 800 10px Arial, sans-serif; text-shadow: 0 2px 5px #000b; }
+.player-hand-name i { flex: none; width: 8px; height: 8px; border: 1px solid #fff9; border-radius: 50%; box-shadow: 0 0 0 1px #15332a; }
+.player-hand-name > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.player-hand-wrap.disconnected { opacity: .55; filter: grayscale(.65); }
+.player-hand-caption { min-height: 12px; font: 700 8px Arial, sans-serif; color: #efdcaa; text-shadow: 0 2px 5px #000b; }
+.player-hand-wrap.active .player-hand-caption { color: #ffe69e; }
+
+.table-hands-layer { position: absolute; z-index: 2; inset: 0; overflow: hidden; border-radius: inherit; pointer-events: none; }
+.table-resting-hands { position: absolute; width: clamp(135px, 22vw, 310px); aspect-ratio: 900 / 793; filter: drop-shadow(0 6px 6px #071d1666); transform-origin: center center; }
+.table-resting-hand { position: absolute; top: 0; width: 50%; height: 100%; background-position: center; background-size: 100% 100%; background-repeat: no-repeat; }
+.table-resting-hand.left { left: 0; background-image: url('/hands/resting-left.png'); }
+.table-resting-hand.right { right: 0; background-image: url('/hands/resting-right.png'); }
+.table-resting-hands.hand-in-action .table-resting-hand.right { opacity: 0; }
+.table-hand-origin { position: absolute; left: 50%; top: 36%; width: 2px; height: 2px; transform: translate(-50%, -50%); }
+.table-hand-origin.punch { top: 89%; }
+.table-resting-hands.disconnected { opacity: .4; filter: grayscale(.7) drop-shadow(0 6px 6px #071d1666); }
+.table-resting-hands.seat-self { left: 50%; bottom: -61px; transform: translateX(-50%); }
+.table-resting-hands.seat-top { left: 50%; top: -61px; transform: translateX(-50%) rotate(180deg); }
+.table-resting-hands.seat-left { left: -60px; top: 50%; transform: translateY(-50%) rotate(90deg); }
+.table-resting-hands.seat-right { right: -60px; top: 50%; transform: translateY(-50%) rotate(-90deg); }
+.table-resting-hands.seat-upper-left { left: 25%; top: -61px; transform: translateX(-50%) rotate(180deg); }
+.table-resting-hands.seat-upper-right { left: 75%; top: -61px; transform: translateX(-50%) rotate(180deg); }
+.table-resting-hands.seat-bottom-right { left: 75%; bottom: -61px; transform: translateX(-50%); }
+.table-stage.edge-seats .table-resting-hands.seat-self { left: 25%; }
+.table-stage.edge-seats .table-player.seat-self { left: 3%; right: 52%; bottom: 18px; }
+.table-stage.edge-seats .table-player.seat-bottom-right { left: 52%; right: 3%; top: auto; bottom: 18px; width: auto; height: 132px; flex-direction: row; }
+.table-stage.edge-seats .seat-bottom-right .table-player-cards { flex-direction: row; }
+.table-stage.edge-seats .table-player.seat-upper-left { left: 3%; right: auto; top: 55px; width: 44%; }
+.table-stage.edge-seats .table-player.seat-upper-right { left: auto; right: 3%; top: 55px; width: 44%; }
+.table-stage.edge-seats .seat-bottom-right .seat-dice-slot { top: -64px; }
+.table-stage.edge-seats .board-dice.dock-self:is(.docking,.docked) { left: 25%; }
+.table-stage .board-dice.dock-bottom-right:is(.docking,.docked) { left: 75%; top: calc(100% - 8px); }
+.table-stage .board-dice.dock-upper-left:is(.docking,.docked) { left: 25%; top: 195px; }
+.table-stage .board-dice.dock-upper-right:is(.docking,.docked) { left: 75%; top: 195px; }
+.table-stage.six-seats .table-resting-hands { width: clamp(125px, 17vw, 245px); }
+.table-stage.six-seats .table-resting-hands.seat-self { left: 25%; }
+.table-stage.six-seats .table-resting-hands.seat-bottom-right { left: 75%; }
+.table-stage.six-seats .board-dice.dock-self:is(.docking,.docked) { left: 25%; }
+.table-stage.six-seats .table-resting-hands.seat-left { left: -48px; }
+.table-stage.six-seats .table-resting-hands.seat-right { right: -48px; }
+
+.hand-artwork { display: block; width: 100%; height: 100%; background: url('/hands/reaching-hand.png') center / contain no-repeat; }
+.hand-artwork.pose-palm { background-image: url('/hands/palm-up-hand.png'); }
+.hand-artwork:not(.pose-fist) { mask-image: linear-gradient(to right, transparent, #000 22%); }
+.hand-artwork.pose-fist { background-image: url('/hands/fist-hand.png'); background-size: 180% auto; background-position: 75% center; }
+.table-stage:is(.expanded-map,.standard-paired) .seat-self .table-player-heading { width: 100px; }
+.table-stage .table-player-heading .player-hand-wrap { width: 100px; }
+@media (max-width: 900px) {
+  .player-hand-wrap, .table-stage .table-player-heading .player-hand-wrap { width: 78px; }
+  .player-hand-name { font-size: 8px; }
+  .table-stage:is(.expanded-map,.standard-paired) .seat-self .table-player-heading { width: 78px; }
+  .table-resting-hands.seat-self, .table-resting-hands.seat-bottom-right { bottom: -37px; }
+  .table-resting-hands.seat-top { top: -37px; }
+  .table-resting-hands.seat-left { left: -36px; }
+  .table-resting-hands.seat-right { right: -36px; }
+  .table-resting-hands.seat-upper-left, .table-resting-hands.seat-upper-right { top: -45px; }
+  .table-stage.edge-seats .table-player.seat-self { left: 2%; right: 51%; bottom: 10px; }
+  .table-stage.edge-seats .table-player.seat-bottom-right { left: 51%; right: 2%; bottom: 10px; height: 128px; }
+  .table-stage.edge-seats .table-player.seat-upper-left { left: 2%; top: 45px; width: 47%; }
+  .table-stage.edge-seats .table-player.seat-upper-right { right: 2%; top: 45px; width: 47%; }
+}
+@media (max-width: 620px) {
+  .table-resting-hands { width: clamp(100px, 27vw, 150px); }
+  .table-stage.six-seats .table-resting-hands { width: clamp(94px, 25vw, 135px); }
+}

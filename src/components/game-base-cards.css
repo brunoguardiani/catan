@@ -1,0 +1,72 @@
+/* Show the user's original card art while masking the white photo backdrop. */
+.material-card,
+.material-card.compact {
+  display: block;
+  aspect-ratio: 0.635;
+  width: min(100%, 97px);
+  height: auto;
+  min-width: 0;
+  padding: 0;
+  margin-inline: auto;
+  overflow: hidden;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  box-shadow: 0 9px 17px #06150f9c;
+}
+.material-card::before { display: none; }
+.material-card:hover,
+.material-card:focus-visible { box-shadow: 0 19px 25px #03130fbd, 0 0 0 3px #f0d39182; }
+.material-card.selected { box-shadow: 0 0 0 3px #f9d88e, 0 14px 22px #0617129c; }
+.material-picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  border-radius: inherit;
+  background-repeat: no-repeat;
+  background-position: 53% 54%;
+  background-size: 228% 128%;
+}
+.material-wood .material-picture { background-image: url('/cards/base/madeira.jpg'); }
+.material-brick .material-picture { background-image: url('/cards/base/argila.jpg'); }
+.material-wool .material-picture { background-image: url('/cards/base/ovelha.jpg'); }
+.material-wheat .material-picture { background-image: url('/cards/base/trigo.jpg'); }
+.material-ore .material-picture {
+  background-image: url('/cards/base/pedra.jpg');
+  background-position: 51% 51%;
+  background-size: 314% 122%;
+}
+.material-card .material-name {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.material-card .material-count {
+  z-index: 1;
+  top: 5px;
+  right: 5px;
+  min-width: 26px;
+  height: 26px;
+  border: 1px solid #e7d3a2;
+  background: #172c26eb;
+  color: #fff1c9;
+  box-shadow: 0 2px 7px #0008;
+  font-size: 11px;
+}
+.material-card.compact {
+  width: 54px;
+  min-width: 54px;
+  height: 84px;
+  border: 0;
+  border-radius: 4px;
+}
+.material-card.compact .material-count { top: 2px; right: 2px; min-width: 17px; height: 17px; font-size: 8px; }
+.trade-card-group .material-card.compact { width: 49px; min-width: 49px; height: 76px; }
+@media (max-width: 700px) {
+  .resource-hand .material-card { width: 73px; height: 115px; }
+  .trade-card-group .material-card.compact { width: 38px; min-width: 38px; height: 59px; }
+}

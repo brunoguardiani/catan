@@ -1,0 +1,28 @@
+html{scroll-behavior:smooth}
+.landing-home{color:#3e2919;background:#39281f;background-image:repeating-linear-gradient(2deg,#ffffff08 0 1px,transparent 1px 9px),linear-gradient(110deg,#493225,#31231d 55%,#503629);overflow:clip}
+.landing-home .ambient{display:none}
+.landing-home .topbar{height:66px;width:min(1320px,calc(100% - 44px));border-bottom:1px solid #e9ca8b50;color:#f6e6c7;gap:22px}
+.landing-home .brand{font-size:14px;letter-spacing:.14em;font-weight:700}
+.landing-home .brand em{color:#eec781}
+.landing-home .brand-mark{width:37px;height:37px;background:#8f3122;border:2px solid #d4ad70;border-radius:6px;color:#ffe6b1;font-size:23px;box-shadow:2px 3px 0 #1d140e}
+.landing-home .landing-nav{display:flex;align-items:center;gap:22px;margin-left:auto}
+.landing-home .landing-nav a{font-size:12px;font-weight:700;color:#e8d3af}
+.landing-home .landing-nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.box-layout{width:min(1320px,calc(100% - 44px));margin:auto;display:grid;grid-template-columns:minmax(0,1.42fr) minmax(335px,1fr);align-items:center;gap:28px;min-height:calc(100dvh - 126px);padding:22px 0 30px;position:relative;z-index:1}
+.box-layout .game-box{grid-column:1;grid-row:1}.box-layout .entry-card{grid-column:2;grid-row:1}
+.landing-home .entry-card{width:100%;max-width:470px;justify-self:center;padding:28px 29px;background:#f3e7c9;border:7px solid #a7723e;border-radius:8px;box-shadow:inset 0 0 0 2px #d6b478,0 14px 0 #26181080,0 25px 35px #140d0a70;color:#47311f}
+.landing-home .card-heading{margin-bottom:16px}.landing-home .card-heading h2{font-size:30px;color:#55351f;margin-top:3px}.landing-home .overline{color:#9e3924}
+.landing-home .entry-card label{color:#65482d;margin:13px 0 6px;font-size:11px}
+.landing-home .entry-card input{background:#fff9e9;color:#4d3522;border:1px solid #b99563;height:43px;border-radius:5px}
+.landing-home .entry-card input::placeholder{color:#90785d}
+.landing-home .avatar-choices{gap:5px}.landing-home .avatar-choice{width:42px;height:42px;background:#e8d1a8;border:1px solid #b6905f;border-radius:6px;font-size:21px}.landing-home .avatar-choice.selected{background:#e7b779;border:2px solid #9b3822;box-shadow:none}
+.landing-home .primary-button{background:#99341f;color:#fff4da;height:47px;box-shadow:0 3px 0 #672113;margin-top:20px;border-radius:5px}.landing-home .primary-button:hover{background:#b94327}
+.landing-home .divider{color:#8a6948;margin:19px 0 13px;font-size:9px}.landing-home .divider:before,.landing-home .divider:after{background:#b79a72}
+.landing-home .join-row{grid-template-columns:minmax(0,1fr) 152px}.landing-home .join-row button{background:#e4c590;color:#5f3c23;border:1px solid #a97c4d;border-radius:5px;font-size:12px;font-weight:800}.landing-home .join-row button:hover{background:#f0d9aa}
+.landing-home .continue-button{color:#87351f;margin-top:13px;font-size:12px}.landing-home .card-footnote{color:#735e47;margin-top:15px;font-size:10px}.landing-home .error-message{background:#f1d8c9;color:#8b291c}
+.landing-home footer{width:min(1320px,calc(100% - 44px));height:60px;border-top:1px solid #d7b78060;color:#dbc29a;min-height:60px}.landing-home footer span:first-child{color:#f0d39d}
+.landing-home :is(button,a,input,select,summary):focus-visible{outline:3px solid #e3b654;outline-offset:3px}
+@media(max-width:960px){.box-layout{grid-template-columns:1fr;max-width:760px;padding:28px 0 45px}.landing-home .entry-card{max-width:560px;justify-self:stretch;margin:auto}.box-layout .game-box{width:100%}}
+@media(max-width:960px){.box-layout .entry-card{grid-column:1;grid-row:1}.box-layout .game-box{grid-column:1;grid-row:2}}
+@media(max-width:650px){.landing-home .topbar{height:61px;width:calc(100% - 28px)}.landing-home .brand{font-size:12px;gap:8px}.landing-home .brand-mark{width:32px;height:32px}.landing-home .landing-nav{gap:10px}.landing-home .landing-nav a{font-size:10px}.box-layout{width:calc(100% - 20px);padding:12px 0 32px;gap:20px}.landing-home .entry-card{width:calc(100% - 12px);padding:20px}.landing-home .join-row{grid-template-columns:minmax(0,1fr) 122px}.landing-home .join-row button{font-size:10px}.landing-home footer{width:calc(100% - 28px)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
